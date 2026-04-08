@@ -865,6 +865,9 @@ footer{
 .step-badge.s3{background:linear-gradient(135deg,var(--gold-wash),var(--gold-light));}
 .step-badge.s4{background:linear-gradient(135deg,#e4f0e8,var(--green-pale));}
 .step-badge.s5{background:linear-gradient(135deg,#fff6e0,var(--gold-light));}
+.step-badge.s6{background:linear-gradient(135deg,#e8f4f8,var(--sky));}
+.step-badge.s7{background:linear-gradient(135deg,var(--green-pale),var(--green-light));}
+.step-badge.s8{background:linear-gradient(135deg,var(--gold-light),var(--gold));}
 .step-num{font-family:'Noto Serif TC',serif;font-size:.65rem;letter-spacing:.08em;color:var(--text-light);margin-bottom:2px;}
 .step-char{font-family:'Noto Serif TC',serif;font-size:1.4rem;font-weight:600;color:var(--green-deep);}
 .step-card{
@@ -1750,7 +1753,7 @@ footer{
     <div class="page-hero-content">
       <div class="page-hero-tag">PROCESS</div>
       <h1>申請的路徑</h1>
-      <p>清晰、透明的五步驟驗證流程，<br>讓您的每一份努力，都有跡可循。</p>
+      <p>清晰、透明的八步驟驗證申請作業流程，<br>讓您的每一份努力，都有跡可循。</p>
     </div>
     <svg class="hero-hills" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
       <path d="M0 90 C180 50, 360 110, 540 70 C720 30, 900 100, 1080 60 C1260 20, 1380 90, 1440 60 L1440 120 L0 120 Z" fill="#d4e8be" opacity=".4"/>
@@ -1772,70 +1775,77 @@ footer{
     <div class="ipas-tab-panel active" id="proc-steps">
       <div class="steps-container fade-in">
         <div class="steps-line"></div>
+
         <div class="step-item">
           <div class="step-badge s1"><span class="step-num">STEP</span><span class="step-char">01</span></div>
           <div class="step-card">
-            <div class="step-title">洽詢與說明</div>
-            <p class="step-desc">透過電話或電子郵件與本公司聯繫，了解驗證服務的詳細內容、範圍及費用。</p>
-            <ul class="step-list">
-              <li>確認驗證類別（產銷履歷 / 有機）</li>
-              <li>了解驗證基準與申請條件</li>
-              <li>確認費用及時程</li>
-            </ul>
+            <div class="step-title">申請 / 初訪</div>
+            <p class="step-desc">經營者提出驗證申請，驗證機構進行初步了解與溝通。</p>
             <a class="step-link" onclick="goTo('contact')">立即聯繫 →</a>
           </div>
         </div>
+
         <div class="step-item">
           <div class="step-badge s2"><span class="step-num">STEP</span><span class="step-char">02</span></div>
           <div class="step-card">
-            <div class="step-title">提交申請文件</div>
-            <p class="step-desc">下載並填寫申請書，備妥所需文件後向本公司提交申請。</p>
-            <ul class="step-list">
-              <li>填寫驗證申請書</li>
-              <li>備妥生產紀錄及相關文件</li>
-              <li>繳交申請費用</li>
-            </ul>
-            <a class="step-link" onclick="goTo('download')">下載申請文件 →</a>
+            <div class="step-title">確認範圍</div>
+            <p class="step-desc">明確界定欲申請驗證的作物種類、土地面積及生產場域範圍。</p>
           </div>
         </div>
+
         <div class="step-item">
           <div class="step-badge s3"><span class="step-num">STEP</span><span class="step-char">03</span></div>
           <div class="step-card">
-            <div class="step-title">文件審查</div>
-            <p class="step-desc">本公司稽核人員進行申請文件的書面審查，確認文件完整性與符合性。</p>
-            <ul class="step-list">
-              <li>書面審查作業</li>
-              <li>如有缺漏將通知補件</li>
-              <li>審查通過後安排現場稽核</li>
-            </ul>
-            <span class="step-note">約 5–10 個工作日</span>
+            <div class="step-title">評鑑安排</div>
+            <p class="step-desc">由驗證機構排定稽核人員，並與申請者約定正式評鑑的時間。</p>
           </div>
         </div>
+
         <div class="step-item">
           <div class="step-badge s4"><span class="step-num">STEP</span><span class="step-char">04</span></div>
           <div class="step-card">
-            <div class="step-title">現場稽核</div>
-            <p class="step-desc">稽核人員至生產現場進行實地查驗，確認實際操作符合驗證標準。</p>
-            <ul class="step-list">
-              <li>生產環境現場查驗</li>
-              <li>農藥使用紀錄確認</li>
-              <li>操作流程符合性評估</li>
-            </ul>
+            <div class="step-title">文件審查</div>
+            <p class="step-desc">審核生產紀錄、資材採購憑證、地籍資料等相關書面文件。</p>
+            <a class="step-link" onclick="goTo('download')">下載申請文件 →</a>
           </div>
         </div>
+
         <div class="step-item">
           <div class="step-badge s5"><span class="step-num">STEP</span><span class="step-char">05</span></div>
           <div class="step-card">
-            <div class="step-title">核發證書</div>
-            <p class="step-desc">通過所有審查後，本公司正式核發驗證證書，有效期間為一年。</p>
-            <ul class="step-list">
-              <li>核發驗證證書及標章</li>
-              <li>可申請農產品環境補貼（產銷履歷）</li>
-              <li>每年進行追蹤稽核維持驗證</li>
-            </ul>
-            <span class="step-note">🎉 恭喜，您的努力有了最真實的印記！</span>
+            <div class="step-title">現場稽查與產品檢驗</div>
+            <p class="step-desc">稽核員至現場確認實際操作是否符合規範，並進行產品抽樣檢驗（如農藥殘留等）。</p>
           </div>
         </div>
+
+        <div class="step-item">
+          <div class="step-badge s6"><span class="step-num">STEP</span><span class="step-char">06</span></div>
+          <div class="step-card">
+            <div class="step-title">缺失矯正</div>
+            <p class="step-desc">若稽核過程中發現不符規範之處，申請者須在期限內完成改善措施。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-badge s7"><span class="step-num">STEP</span><span class="step-char">07</span></div>
+          <div class="step-card">
+            <div class="step-title">總結報告審查</div>
+            <p class="step-desc">彙整現場稽查記錄與檢驗結果，提交驗證機構之技術委員會進行最後審核。</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-badge s8"><span class="step-num">STEP</span><span class="step-char">08</span></div>
+          <div class="step-card">
+            <div class="step-title">驗證決定</div>
+            <p class="step-desc">根據審核結果做出最終判定：</p>
+            <ul class="step-list">
+              <li>✅ 通過：核發驗證證書。</li>
+              <li>❌ 不通過：結案或要求限期改善。</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
 
