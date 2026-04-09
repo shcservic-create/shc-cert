@@ -1058,61 +1058,125 @@ footer{
 .dl-arrow{font-size:.85rem;color:var(--green-light);}
 
 /* ════════════════════════════════════════
-   PAGE: CONTACT
+   PAGE: CONTACT (文青重設計)
 ════════════════════════════════════════ */
-.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;margin:2rem 0;}
-.contact-info-box{
-  background:white;border-radius:var(--r);
-  border:1px solid var(--border);box-shadow:var(--shadow);
-  padding:2.5rem 2.8rem;
+.contact-literary {
+  max-width: 860px;
+  margin: 2.5rem auto 4rem;
 }
-.contact-info-box h3{
-  font-family:'Noto Serif TC',serif;font-size:1.15rem;
-  font-weight:400;color:var(--green-deep);margin-bottom:.5rem;
+.contact-lit-quote {
+  text-align: center;
+  font-family: 'Noto Serif TC', serif;
+  font-size: .95rem;
+  color: var(--text-light);
+  letter-spacing: .12em;
+  line-height: 2;
+  margin-bottom: 3rem;
+  padding: 1.6rem 2rem;
+  background: linear-gradient(135deg, #f5f8f5, #eef5f8, #f8f5ee);
+  border-radius: 12px;
+  border: 1px solid var(--green-pale);
+  position: relative;
 }
-.contact-quote{
-  font-family:'Noto Serif TC',serif;font-size:.85rem;
-  color:var(--text-light);line-height:1.9;margin-bottom:2rem;
-  font-style:italic;
+.contact-lit-deco {
+  color: var(--green-pale);
+  font-size: 1.2rem;
+  margin: 0 .8rem;
 }
-.contact-row{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.4rem;}
-.contact-row-icon{
-  width:40px;height:40px;border-radius:10px;
-  background:var(--green-wash);display:flex;
-  align-items:center;justify-content:center;
-  font-size:1rem;flex-shrink:0;margin-top:.1rem;
+.contact-lit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
 }
-.contact-row-label{font-size:.74rem;letter-spacing:.1em;color:var(--text-light);margin-bottom:.2rem;}
-.contact-row-value{font-size:.88rem;color:var(--text-dark);line-height:1.6;}
-.contact-row-value a{color:var(--green-mid);}
-.contact-form-box{
-  background:white;border-radius:var(--r);
-  border:1px solid var(--border);box-shadow:var(--shadow);
-  overflow:hidden;
+.contact-lit-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem 1.6rem;
+  box-shadow: 0 2px 12px rgba(45,90,61,.05);
+  transition: box-shadow .3s, transform .3s;
+  position: relative;
+  overflow: hidden;
 }
-.cf-header{
-  background:linear-gradient(135deg,#dff0ea,#daeef5);
-  padding:1.5rem 2rem;
+.contact-lit-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green-light), var(--sky-deep));
+  opacity: 0;
+  transition: opacity .3s;
 }
-.cf-header h3{font-family:'Noto Serif TC',serif;font-size:1rem;font-weight:400;color:var(--green-deep);}
-.cf-body{padding:2rem;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.form-group{margin-bottom:1.1rem;}
-.form-label{display:block;font-size:.78rem;letter-spacing:.08em;color:var(--text-mid);margin-bottom:.4rem;}
-.form-input{
-  width:100%;padding:.72rem 1rem;
-  border:1.5px solid var(--inst-line);
-  border-radius:8px;font-size:.84rem;
-  color:var(--text-dark);font-family:inherit;
-  transition:border-color .2s;background:white;
+.contact-lit-card:hover {
+  box-shadow: 0 8px 28px rgba(45,90,61,.1);
+  transform: translateY(-2px);
 }
-.form-input:focus{outline:none;border-color:var(--green-mid);}
-.form-textarea{height:120px;resize:vertical;}
-.cf-error{display:none;font-size:.8rem;color:#c0392b;margin-top:.6rem;text-align:center;}
-.form-success-msg{
-  background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;
-  color:#2e7d32;font-size:.88rem;padding:1rem 1.4rem;
-  margin-bottom:1.2rem;
+.contact-lit-card:hover::before { opacity: 1; }
+.contact-lit-icon {
+  font-size: 1.3rem;
+  color: var(--green-light);
+  margin-bottom: .9rem;
+  font-family: 'Noto Serif TC', serif;
+  line-height: 1;
+}
+.contact-lit-label {
+  font-size: .7rem;
+  letter-spacing: .18em;
+  color: var(--text-light);
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+}
+.contact-lit-value {
+  font-size: .88rem;
+  color: var(--text-dark);
+  line-height: 1.75;
+}
+.contact-lit-value a {
+  color: var(--green-mid);
+  transition: color .2s;
+}
+.contact-lit-value a:hover { color: var(--green-deep); }
+.contact-lit-map-btn {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: 3px 10px;
+  background: var(--green-wash);
+  border: 1px solid var(--green-pale);
+  border-radius: 20px;
+  font-size: .76rem;
+  color: var(--green-deep) !important;
+}
+.contact-lit-links {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.contact-lit-notice {
+  background: linear-gradient(135deg, #faf8f3, #f5f8f5);
+  border: 1px solid var(--gold-light);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+  padding: 1.2rem 1.6rem;
+  font-size: .84rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  display: flex;
+  gap: .9rem;
+  align-items: flex-start;
+}
+.contact-lit-notice-mark {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.1rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+@media(max-width:768px){
+  .contact-lit-grid { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width:480px){
+  .contact-lit-grid { grid-template-columns: 1fr; }
 }
 
 /* ── CTA SECTION ── */
@@ -1446,7 +1510,7 @@ footer{
         <button onclick="goTo('contact')">聯絡我們</button>
       </div>
       <div class="footer-col" style="font-size:.76rem;"><h4>聯絡我們</h4>
-<a href="mailto:servic@shc-cert.com">📧 servic@shc-cert.com</a>
+📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a>
 <a href="tel:0976470989">📞 0976-470-989</a>
 <a>📠 06-2366-922</a>
 <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">🏢 台南市東區裕農路520號3樓</a>
@@ -1567,7 +1631,7 @@ footer{
         <div class="fb-card">
           <div class="fb-icon">◈</div>
           <div class="fb-title">抱怨建議</div>
-          <p class="fb-desc">如您欲對本公司驗證業務與其他業務、以及行政管理等作業或其他相關事宜提出非申訴之改進意見，請告知姓名、所屬組織之名稱、抱怨對象、抱怨內容，並檢附相關意見或證明文件，應以電子郵件（<a href="mailto:servic@shc-cert.com">servic@shc-cert.com</a>）、信函或其他書面方式（地址：701臺南市東區裕農路520號3樓四季豐收驗證有限公司）向本公司提出，本公司將於<strong>20個工作天內</strong>完成抱怨事件之處理，並函覆您抱怨處理結果，必要時得徵詢抱怨者同意後延長處理期限。請提供真實姓名及聯絡方式，匿名抱怨、抱怨未附理由或相關證明者得不予受理。</p>
+          <p class="fb-desc">如您欲對本公司驗證業務與其他業務、以及行政管理等作業或其他相關事宜提出非申訴之改進意見，請告知姓名、所屬組織之名稱、抱怨對象、抱怨內容，並檢附相關意見或證明文件，應以電子郵件（📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a>）、信函或其他書面方式（地址：701臺南市東區裕農路520號3樓四季豐收驗證有限公司）向本公司提出，本公司將於<strong>20個工作天內</strong>完成抱怨事件之處理，並函覆您抱怨處理結果，必要時得徵詢抱怨者同意後延長處理期限。請提供真實姓名及聯絡方式，匿名抱怨、抱怨未附理由或相關證明者得不予受理。</p>
         </div>
       </div>
     </div>
@@ -1578,7 +1642,7 @@ footer{
       <div class="footer-brand"><div class="footer-brand-name">四季豐收驗證有限公司</div><p>與土地共生，讓豐收成為一種守護。</p></div>
       <div class="footer-col"><h4>網站導覽</h4><button onclick="goTo('about')">關於我們</button><button onclick="goTo('services')">服務項目</button><button onclick="goTo('process')">申請流程</button><button onclick="goTo('news')">最新消息</button><button onclick="goTo('directory')">通過名錄</button><button onclick="goTo('download')">文件下載</button><button onclick="goTo('contact')">聯絡我們</button></div>
       <div class="footer-col" style="font-size:.76rem;"><h4>聯絡我們</h4>
-<a href="mailto:servic@shc-cert.com">📧 servic@shc-cert.com</a>
+📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a>
 <a href="tel:0976470989">📞 0976-470-989</a>
 <a>📠 06-2366-922</a>
 <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">🏢 台南市東區裕農路520號3樓</a>
@@ -1698,7 +1762,7 @@ footer{
       <div class="footer-brand"><div class="footer-brand-name">四季豐收驗證有限公司</div><p>與土地共生，讓豐收成為一種守護。</p></div>
       <div class="footer-col"><h4>網站導覽</h4><button onclick="goTo('about')">關於我們</button><button onclick="goTo('services')">服務項目</button><button onclick="goTo('process')">申請流程</button><button onclick="goTo('news')">最新消息</button><button onclick="goTo('directory')">通過名錄</button><button onclick="goTo('download')">文件下載</button><button onclick="goTo('contact')">聯絡我們</button></div>
       <div class="footer-col" style="font-size:.76rem;"><h4>聯絡我們</h4>
-<a href="mailto:servic@shc-cert.com">📧 servic@shc-cert.com</a>
+📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a>
 <a href="tel:0976470989">📞 0976-470-989</a>
 <a>📠 06-2366-922</a>
 <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">🏢 台南市東區裕農路520號3樓</a>
@@ -1882,7 +1946,7 @@ footer{
       <div class="footer-brand"><div class="footer-brand-name">四季豐收驗證有限公司</div><p>與土地共生，讓豐收成為一種守護。</p></div>
       <div class="footer-col"><h4>網站導覽</h4><button onclick="goTo('about')">關於我們</button><button onclick="goTo('services')">服務項目</button><button onclick="goTo('process')">申請流程</button><button onclick="goTo('news')">最新消息</button><button onclick="goTo('directory')">通過名錄</button><button onclick="goTo('download')">文件下載</button><button onclick="goTo('contact')">聯絡我們</button></div>
       <div class="footer-col" style="font-size:.76rem;"><h4>聯絡我們</h4>
-<a href="mailto:servic@shc-cert.com">📧 servic@shc-cert.com</a>
+📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a>
 <a href="tel:0976470989">📞 0976-470-989</a>
 <a>📠 06-2366-922</a>
 <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">🏢 台南市東區裕農路520號3樓</a>
@@ -1963,7 +2027,7 @@ footer{
       <div class="footer-brand"><div class="footer-brand-name">四季豐收驗證有限公司</div><p>與土地共生，讓豐收成為一種守護。</p></div>
       <div class="footer-col"><h4>網站導覽</h4><button onclick="goTo('about')">關於我們</button><button onclick="goTo('services')">服務項目</button><button onclick="goTo('process')">申請流程</button><button onclick="goTo('news')">最新消息</button><button onclick="goTo('directory')">通過名錄</button><button onclick="goTo('download')">文件下載</button><button onclick="goTo('contact')">聯絡我們</button></div>
       <div class="footer-col" style="font-size:.76rem;"><h4>聯絡我們</h4>
-<a href="mailto:servic@shc-cert.com">📧 servic@shc-cert.com</a>
+📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a>
 <a href="tel:0976470989">📞 0976-470-989</a>
 <a>📠 06-2366-922</a>
 <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">🏢 台南市東區裕農路520號3樓</a>
@@ -2038,10 +2102,10 @@ footer{
     </div>
 
     <div class="dir-tabs" id="dir-tabs">
-      <button class="dir-tab active" onclick="switchDir('traceability', this)">產銷履歷 · 籌備中</button>
-      <button class="dir-tab" onclick="switchDir('organic', this)">有機驗證 · 籌備中</button>
-      <button class="dir-tab" onclick="switchDir('terminated', this)">已終止</button>
-      <button class="dir-tab" onclick="switchDir('suspended', this)">暫停中</button>
+      <button class="dir-tab active" onclick="switchDir('traceability', this)">產銷履歷驗證</button>
+      <button class="dir-tab" onclick="switchDir('organic', this)">有機驗證</button>
+      <button class="dir-tab" onclick="switchDir('terminated', this)">結束／終止驗證</button>
+      <button class="dir-tab" onclick="switchDir('suspended', this)">暫時停止驗證</button>
     </div>
 
     <div id="dir-loading" class="loading-box" style="display:none;">載入中…</div>
@@ -2052,7 +2116,7 @@ footer{
       <div class="footer-brand"><div class="footer-brand-name">四季豐收驗證有限公司</div><p>與土地共生，讓豐收成為一種守護。</p></div>
       <div class="footer-col"><h4>網站導覽</h4><button onclick="goTo('about')">關於我們</button><button onclick="goTo('services')">服務項目</button><button onclick="goTo('process')">申請流程</button><button onclick="goTo('news')">最新消息</button><button onclick="goTo('directory')">通過名錄</button><button onclick="goTo('download')">文件下載</button><button onclick="goTo('contact')">聯絡我們</button></div>
       <div class="footer-col" style="font-size:.76rem;"><h4>聯絡我們</h4>
-<a href="mailto:servic@shc-cert.com">📧 servic@shc-cert.com</a>
+📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a>
 <a href="tel:0976470989">📞 0976-470-989</a>
 <a>📠 06-2366-922</a>
 <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">🏢 台南市東區裕農路520號3樓</a>
@@ -2154,7 +2218,7 @@ footer{
       <div class="footer-brand"><div class="footer-brand-name">四季豐收驗證有限公司</div><p>與土地共生，讓豐收成為一種守護。</p></div>
       <div class="footer-col"><h4>網站導覽</h4><button onclick="goTo('about')">關於我們</button><button onclick="goTo('services')">服務項目</button><button onclick="goTo('process')">申請流程</button><button onclick="goTo('news')">最新消息</button><button onclick="goTo('directory')">通過名錄</button><button onclick="goTo('download')">文件下載</button><button onclick="goTo('contact')">聯絡我們</button></div>
       <div class="footer-col" style="font-size:.76rem;"><h4>聯絡我們</h4>
-<a href="mailto:servic@shc-cert.com">📧 servic@shc-cert.com</a>
+📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a>
 <a href="tel:0976470989">📞 0976-470-989</a>
 <a>📠 06-2366-922</a>
 <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">🏢 台南市東區裕農路520號3樓</a>
@@ -2209,7 +2273,7 @@ footer{
     <div class="page-hero-content">
       <div class="page-hero-tag">CONTACT</div>
       <h1>與我們對話</h1>
-      <p>無論是驗證諮詢、法規疑問，<br>還是任何關於農業的想法，我們都在這裡。</p>
+      <p>耕耘的過程，我們幫您記得<br>我們都在，請隨時聯絡我們。</p>
     </div>
     <svg class="hero-hills" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
       <path d="M0 90 C180 50, 360 110, 540 70 C720 30, 900 100, 1080 60 C1260 20, 1380 90, 1440 60 L1440 120 L0 120 Z" fill="#c8dfc8" opacity=".4"/>
@@ -2217,103 +2281,72 @@ footer{
     </svg>
   </section>
   <div class="main-wrap">
-    <div class="contact-grid fade-in">
-      <div class="contact-info-box">
-        <h3>聯絡我們</h3>
-        <p class="contact-quote">一封信，是合作的起點。</p>
-        <div class="contact-row">
-          <div class="contact-row-icon">📧</div>
-          <div>
-            <div class="contact-row-label">Email</div>
-            <div class="contact-row-value"><a href="mailto:servic@shc-cert.com">servic@shc-cert.com</a></div>
-          </div>
+    <div class="contact-literary fade-in">
+
+      <!-- 頂部裝飾引言 -->
+      <div class="contact-lit-quote">
+        <span class="contact-lit-deco">—</span>
+        一封信，是合作的起點。我們在這裡，等待與您相遇。
+        <span class="contact-lit-deco">—</span>
+      </div>
+
+      <!-- 資訊卡片群 -->
+      <div class="contact-lit-grid">
+
+        <div class="contact-lit-card">
+          <div class="contact-lit-icon">✉</div>
+          <div class="contact-lit-label">電子信箱</div>
+          <div class="contact-lit-value">📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a></div>
         </div>
-        <div class="contact-row">
-          <div class="contact-row-icon">📞</div>
-          <div>
-            <div class="contact-row-label">電話</div>
-            <div class="contact-row-value"><a href="tel:0976470989">0976-470-989</a></div>
-          </div>
+
+        <div class="contact-lit-card">
+          <div class="contact-lit-icon">☎</div>
+          <div class="contact-lit-label">聯絡電話</div>
+          <div class="contact-lit-value"><a href="tel:0976470989">0976-470-989</a></div>
         </div>
-        <div class="contact-row">
-          <div class="contact-row-icon">📠</div>
-          <div>
-            <div class="contact-row-label">傳真</div>
-            <div class="contact-row-value">06-2366-922</div>
-          </div>
+
+        <div class="contact-lit-card">
+          <div class="contact-lit-icon">◫</div>
+          <div class="contact-lit-label">傳真</div>
+          <div class="contact-lit-value">06-2366-922</div>
         </div>
-        <div class="contact-row">
-          <div class="contact-row-icon">🏢</div>
-          <div>
-            <div class="contact-row-label">地址</div>
-            <div class="contact-row-value">台南市東區裕農路 520 號 3 樓　<a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener" style="display:inline-block;padding:2px 10px;background:var(--green-deep,#2e7d32);color:#fff;border-radius:4px;font-size:0.78rem;text-decoration:none;">📍 點我導航</a></div>
-          </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-row-icon">🕒</div>
-          <div>
-            <div class="contact-row-label">營業</div>
-            <div class="contact-row-value">週一至週五　09:00 – 18:00</div>
-          </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-row-icon">🔗</div>
-          <div>
-            <div class="contact-row-label">快速連結</div>
-            <div class="contact-row-value">
-              <a href="https://shc-cert.com" target="_blank" rel="noopener">🌐 官方網站：點擊進入</a><br>
-              <a href="https://line.me/R/ti/p/@576kwarv" target="_blank" rel="noopener">💬 LINE 諮詢：@576kwarv</a><br>
-              <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">📍 Google 地圖：點我導航</a>
-            </div>
+
+        <div class="contact-lit-card">
+          <div class="contact-lit-icon">⊙</div>
+          <div class="contact-lit-label">辦公地址</div>
+          <div class="contact-lit-value">
+            台南市東區裕農路 520 號 3 樓
+            <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener" class="contact-lit-map-btn">📍 點我導航</a>
           </div>
         </div>
 
-        <div class="ipas-info-block" style="margin-top:1.5rem;">
-          <strong>申訴及抱怨：</strong>如需提出申訴，請於收到通知次日起 20 個工作日內以書面方式提出，本公司將於 10 個工作日內回覆。
+        <div class="contact-lit-card">
+          <div class="contact-lit-icon">◷</div>
+          <div class="contact-lit-label">服務時間</div>
+          <div class="contact-lit-value">週一至週五　09:00 – 18:00</div>
+        </div>
+
+        <div class="contact-lit-card">
+          <div class="contact-lit-icon">⌘</div>
+          <div class="contact-lit-label">快速連結</div>
+          <div class="contact-lit-value contact-lit-links">
+            <a href="https://shc-cert.com" target="_blank" rel="noopener">🌐 官方網站</a>
+            <a href="https://line.me/R/ti/p/@576kwarv" target="_blank" rel="noopener">💬 LINE：@576kwarv</a>
+            <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">📍 Google 地圖</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 申訴說明 -->
+      <div class="contact-lit-notice">
+        <span class="contact-lit-notice-mark">§</span>
+        <div>
+          <p style="margin-bottom:.8rem;"><strong>申訴案件：</strong>如您對本公司之服務流程或驗證／確證／查證決定有異議時，請於事件發生或收到本公司驗證／確證／查證決定結果通知書之次日起 <strong>20 個工作天</strong>內提出，本公司將於申訴案件調查完畢並做出決議後 <strong>10 個工作天</strong>內以書面方式函覆您。</p>
+          <p><strong>抱怨案件：</strong>如您欲對本公司服務、以及行政管理等作業或其他相關事宜表達非申訴之改進意見，請告知姓名、所屬組織之名稱、抱怨對象、抱怨內容，並檢附相關意見或證明文件，本公司將於 <strong>20 個工作天</strong>內完成抱怨事件之處理，並函覆您抱怨處理結果，必要時得徵詢抱怨者同意後延長處理期限。</p>
         </div>
       </div>
 
-      <div class="contact-form-box">
-        <div class="cf-header">
-          <h3>傳送訊息給我們</h3>
-          <p style="font-size:.8rem;color:var(--green-mid);margin-top:.3rem;">我們盡快回覆！！！</p>
-        </div>
-        <div class="cf-body">
-          <div id="form-success" style="display:none;" class="form-success-msg">✅ 訊息已送出！我們將盡快與您聯繫。</div>
-          <div id="contact-form-fields">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">姓名 *</label>
-                <input id="cf-name" class="form-input" type="text" placeholder="您的姓名">
-              </div>
-              <div class="form-group">
-                <label class="form-label">電話</label>
-                <input id="cf-phone" class="form-input" type="tel" placeholder="選填">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">電子郵件 *</label>
-              <input id="cf-email" class="form-input" type="email" placeholder="email@example.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label">主旨</label>
-              <select id="cf-subject" class="form-input">
-                <option value="">請選擇主旨</option>
-                <option>驗證申請諮詢</option>
-                <option>費用查詢</option>
-                <option>申訴/抱怨</option>
-                <option>其他</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">訊息內容 *</label>
-              <textarea id="cf-message" class="form-input form-textarea" placeholder="請描述您的需求或問題…"></textarea>
-            </div>
-            <button id="cf-submit" class="btn-primary" style="width:100%;justify-content:center;" onclick="submitContact()">送出訊息 →</button>
-            <p id="cf-error" class="cf-error"></p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
   <footer>
@@ -2321,7 +2354,7 @@ footer{
       <div class="footer-brand"><div class="footer-brand-name">四季豐收驗證有限公司</div><p>與土地共生，讓豐收成為一種守護。</p></div>
       <div class="footer-col"><h4>網站導覽</h4><button onclick="goTo('about')">關於我們</button><button onclick="goTo('services')">服務項目</button><button onclick="goTo('process')">申請流程</button><button onclick="goTo('news')">最新消息</button><button onclick="goTo('directory')">通過名錄</button><button onclick="goTo('download')">文件下載</button><button onclick="goTo('contact')">聯絡我們</button></div>
       <div class="footer-col" style="font-size:.76rem;"><h4>聯絡我們</h4>
-<a href="mailto:servic@shc-cert.com">📧 servic@shc-cert.com</a>
+📧 <a href="mailto:service@shc-cert.com">service@shc-cert.com</a>
 <a href="tel:0976470989">📞 0976-470-989</a>
 <a>📠 06-2366-922</a>
 <a href="https://maps.app.goo.gl/Bxr7KMLmY8UQ4QQv6" target="_blank" rel="noopener">🏢 台南市東區裕農路520號3樓</a>
@@ -2345,7 +2378,7 @@ footer{
 </div>
 
 <!-- ═══════════════════════════ JAVASCRIPT ═══════════════════════════ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── SANITY CONFIG ──
 const PROJECT_ID = 'ogxgaq1q';
 const DATASET = 'production';
@@ -2452,7 +2485,7 @@ async function apiFetch(type) {
   if (type === 'news') {
     query = '*[_type=="news"]|order(date desc){date,tag,title,excerpt,link,status}';
   } else if (type === 'directory') {
-    query = '*[_type=="directory"]{seq,operator,scope,certNo,certExpiry,certIssued,category}';
+    query = '*[_type=="directory"]{seq,operator,scope,items,productRange,certNo,certExpiry,certIssued,endDate,certStatus,suspendDate,category}';
   } else if (type === 'downloads') {
     query = '*[_type=="download"]|order(order asc){name,format,"url":url,category,order}';
   } else {
@@ -2464,7 +2497,9 @@ async function apiFetch(type) {
     const data = await res.json();
     if (data.result) { cache[type] = data.result; return data.result; }
   } catch(e) {}
-  return getDemoData(type);
+  const demo = getDemoData(type);
+  cache[type] = demo;
+  return demo;
 }
 
 // ── DEMO DATA ──
@@ -2475,24 +2510,24 @@ function getDemoData(type) {
   ];
   if (type === 'directory') return {
     traceability: [
-      { seq:1, operator:'產銷履歷驗證業者 001', scope:'稻米', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
-      { seq:2, operator:'產銷履歷驗證業者 002', scope:'蔬菜', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
-      { seq:3, operator:'產銷履歷驗證業者 003', scope:'茶葉', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
-      { seq:4, operator:'產銷履歷驗證業者 004', scope:'水果', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
-      { seq:5, operator:'產銷履歷驗證業者 005', scope:'雜糧', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
-      { seq:6, operator:'產銷履歷驗證業者 006', scope:'稻米', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:1, operator:'產銷履歷驗證業者 001', scope:'產銷履歷農糧產品', items:'稻米', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:2, operator:'產銷履歷驗證業者 002', scope:'產銷履歷農糧產品', items:'蔬菜', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:3, operator:'產銷履歷驗證業者 003', scope:'產銷履歷農糧產品', items:'茶葉', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:4, operator:'產銷履歷驗證業者 004', scope:'產銷履歷農糧產品', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:5, operator:'產銷履歷驗證業者 005', scope:'產銷履歷農糧產品', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:6, operator:'產銷履歷驗證業者 006', scope:'產銷履歷農糧產品', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
     ],
     organic: [
-      { seq:1, operator:'有機驗證業者 001', scope:'蔬菜', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
-      { seq:2, operator:'有機驗證業者 002', scope:'水果', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
-      { seq:3, operator:'有機驗證業者 003', scope:'茶葉', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:1, operator:'有機驗證業者 001', scope:'有機農產品加工分裝流通', items:'米類加工品', productRange:'有機乾穀、有機白米、有機糙米', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:2, operator:'有機驗證業者 002', scope:'有機農產品加工分裝流通', items:'蔬菜加工品', productRange:'有機蔬菜、有機冷凍蔬菜', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:3, operator:'有機驗證業者 003', scope:'有機農糧產品', items:'茶葉', productRange:'有機茶葉', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
     ],
     terminated: [
-      { seq:1, operator:'產銷履歷驗證業者 007', scope:'蔬菜', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
-      { seq:2, operator:'產銷履歷驗證業者 008', scope:'稻米', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:1, operator:'產銷履歷驗證業者 007', scope:'產銷履歷農糧產品', items:'蔬菜', certNo:'籌備中', endDate:'籌備中', certStatus:'籌備中' },
+      { seq:2, operator:'產銷履歷驗證業者 008', scope:'產銷履歷農糧產品', items:'稻米', certNo:'籌備中', endDate:'籌備中', certStatus:'籌備中' },
     ],
     suspended: [
-      { seq:1, operator:'產銷履歷驗證業者 009', scope:'水果', certNo:'籌備中', certExpiry:'籌備中', certIssued:'籌備中' },
+      { seq:1, operator:'產銷履歷驗證業者 009', scope:'產銷履歷農糧產品', items:'水果', certNo:'籌備中', suspendDate:'籌備中' },
     ]
   };
   if (type === 'downloads') return {
@@ -2575,11 +2610,22 @@ function filterNews(tag, btn) {
 //  DIRECTORY
 // ══════════════════════════════════════════
 async function loadDirectory() {
+  if (dirData) { renderDirTab(currentDirTab); return; }
   const loading = document.getElementById('dir-loading');
   loading.style.display = 'block';
   document.getElementById('dir-table-wrap').innerHTML = '';
   try {
-    dirData = await apiFetch('directory');
+    const raw = await apiFetch('directory');
+    if (Array.isArray(raw)) {
+      dirData = { traceability: [], organic: [], terminated: [], suspended: [] };
+      raw.forEach(r => {
+        const cat = r.category || 'traceability';
+        if (dirData[cat]) dirData[cat].push(r);
+        else dirData['traceability'].push(r);
+      });
+    } else {
+      dirData = raw;
+    }
     loading.style.display = 'none';
     renderDirTab(currentDirTab);
   } catch(e) {
@@ -2599,27 +2645,33 @@ function renderDirTab(tab, searchTerm, regionFilter) {
   let rows = dirData ? dirData[tab] || [] : [];
   if (searchTerm) {
     const s = searchTerm.toLowerCase();
-    rows = rows.filter(r => (r.operator||'').toLowerCase().includes(s) || (r.scope||'').toLowerCase().includes(s) || (r.certNo||'').toLowerCase().includes(s));
+    rows = rows.filter(r => (r.operator||'').toLowerCase().includes(s) || (r.scope||'').toLowerCase().includes(s) || (r.items||'').toLowerCase().includes(s) || (r.productRange||'').toLowerCase().includes(s) || (r.certNo||'').toLowerCase().includes(s));
   }
   if (!rows.length) {
     wrap.innerHTML = '<div class="dir-empty">目前此分類尚無符合資料。</div>';
     return;
   }
+  const isOrganic = tab === 'organic';
+  const isTerminated = tab === 'terminated';
+  const isSuspended = tab === 'suspended';
   wrap.innerHTML = `
     <table class="dir-table">
       <thead><tr>
-        <th>序號</th><th>農產品經營者</th><th>驗證範圍驗證品項</th>
-        <th>證書字號</th><th>證書到期日</th><th>發證日期</th>
+        <th>序號</th><th>農產品經營者</th><th>驗證範圍</th><th>驗證品項</th>
+        ${isOrganic ? '<th>產品範圍</th>' : ''}
+        <th>證書字號</th>
+        ${isTerminated ? '<th>結束/終止驗證日期</th><th>驗證狀態</th>' : isSuspended ? '<th>暫時停止日期</th>' : '<th>證書到期日</th><th>發證日期</th>'}
       </tr></thead>
       <tbody>
         ${rows.map(r => `
           <tr>
             <td>${r.seq}</td>
             <td>${r.operator}</td>
-            <td>${r.scope}</td>
+            <td>${r.scope||''}</td>
+            <td>${r.items||''}</td>
+            ${isOrganic ? `<td>${r.productRange||''}</td>` : ''}
             <td>${r.certNo}</td>
-            <td>${r.certExpiry}</td>
-            <td>${r.certIssued}</td>
+            ${isTerminated ? `<td>${r.endDate||''}</td><td>${r.certStatus||''}</td>` : isSuspended ? `<td>${r.suspendDate||''}</td>` : `<td>${r.certExpiry}</td><td>${r.certIssued}</td>`}
           </tr>`).join('')}
       </tbody>
     </table>`;
@@ -2683,21 +2735,13 @@ function renderDlList(type, items) {
 const policyContent = {
   quality: {
     title: '驗證品質政策',
-    body: `四季豐收驗證有限公司秉持「誠信、公正、專業」的核心價值，以嚴謹且一致的驗證流程，確保每一份驗證結果皆具備公信力與可追溯性。
+    body: `【春．公正】春耕規律，公正引領：提供精準的合規指南，以絕對公正的立場建立標準，為客戶扎下穩健經營的根基。
 
-本公司承諾：
+【夏．誠信】夏長基石，誠信築夢：落實如大地般堅實的誠信承諾，以嚴謹驗證守護品質，賦予客戶最可靠的服務保障。
 
-一、依據農業部及 TAF 認可之驗證基準，忠實執行驗證作業，不受任何商業或外部壓力影響。
+【秋．優質】秋收豐盛，優質領航：追求持續的技術創新，煉就優質的驗證成果，引領客戶實踐追求卓越的堅定目標。
 
-二、持續精進驗證人員專業能力，定期接受教育訓練與外部稽核，確保技術水準與法規同步更新。
-
-三、建立完善的文件管理制度，對驗證過程中所有紀錄進行妥善保存，並依法規規定期限保管。
-
-四、積極接受客戶申訴與建議，於法定期限內完成處理，並將結果回饋申請人。
-
-五、定期檢視本品質政策之適切性，由管理階層主導年度審查，持續改善驗證系統之有效性。
-
-本政策適用於本公司所有驗證業務，全體人員應確實遵守並持續落實。`
+【冬．高效】冬藏蓄勢，高效永續：落實高效的審核流程，以精確專業提升時效，守護土地永續與企業深耕的經營價值。`
   },
   impartiality: {
     title: '公正性聲明',
@@ -2754,30 +2798,18 @@ const policyContent = {
   },
   finance: {
     title: '財務來源',
-    body: `四季豐收驗證有限公司秉持財務透明原則，本公司財務來源說明如下：
-
-一、驗證服務收費
-本公司主要收入來源為向申請驗證之農業生產者、企業或機構收取驗證申請費、年費及查驗費用，收費標準依本公司公告之收費基準執行。
-
-二、訓練與諮詢服務
-提供農業驗證相關教育訓練課程及技術諮詢服務所收取之費用。
-
-三、政府計畫補助
-依法向農業主管機關申請之輔導計畫補助款，用於提升驗證服務品質與擴展服務範疇。
-
-四、財務管理原則
-· 所有收費標準均公開透明，不因申請人背景而有差異
-· 驗證費用與驗證決策完全獨立，不影響驗證結果之公正性
-· 財務帳目定期由會計師事務所進行查核，確保財務報告之正確性
-
-如需進一步了解本公司收費標準，請透過電子郵件與本公司聯繫。`
+    body: `四季豐收驗證有限公司秉持財務�`
   }
 };
 
-function openPolicy(type) {
-  const data = policyContent[type];
-  document.getElementById('policyModalTitle').textContent = data.title;
-  document.getElementById('policyModalBody').textContent  = data.body;
+// ══════════════════════════════════════════
+//  POLICY MODAL
+// ══════════════════════════════════════════
+function openPolicy(key) {
+  const content = policyContent[key];
+  if (!content) return;
+  document.getElementById('policyModalTitle').textContent = content.title;
+  document.getElementById('policyModalBody').textContent = content.body;
   document.getElementById('policyModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -2788,6 +2820,9 @@ function closePolicy() {
 function closePolicyIfBg(e) {
   if (e.target === document.getElementById('policyModal')) closePolicy();
 }
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closePolicy();
+});
 </script>
 </body>
 </html>
