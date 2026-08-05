@@ -787,6 +787,8 @@ footer{
 .value-num{font-family:'Noto Serif TC',serif;font-size:.7rem;letter-spacing:.15em;color:var(--gold);margin-bottom:.8rem;}
 .value-name{font-family:'Noto Serif TC',serif;font-size:1.05rem;font-weight:500;color:var(--green-deep);margin-bottom:.7rem;}
 .value-desc{font-size:.83rem;color:var(--text-mid);line-height:1.9;}
+.values-doc-image{margin-top:2rem;}
+.values-doc-image img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);}
 .impartiality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:1.5rem 0;}
 .imp-card{background:white;border-radius:var(--r);padding:1.8rem;border:1px solid var(--border);box-shadow:var(--shadow);}
 .imp-icon{font-size:1.4rem;margin-bottom:.8rem;}
@@ -1547,6 +1549,11 @@ footer{
           <p class="value-desc">關注生物多樣性與環境友善，不斷精進服務，引領農業航向與自然和諧共好的永續未來，為下一代守護這片土地。</p>
         </div>
       </div>
+      <div class="values-doc-image fade-in">
+        <img src="shc-wi-04-impartiality-signed.png"
+             alt="產銷履歷驗證公正性聲明（簽名版）"
+             loading="lazy">
+      </div>
     </div>
 
     <!-- Tab: 申訴與建議 -->
@@ -2301,16 +2308,16 @@ function getDemoData(type) {
   };
   if (type === 'downloads') return {
     traceability: [
-      { name:'SHC-T-FM-21 農產品產銷履歷驗證申請書', format:'DOC', url:'SHC-T-FM-21 產銷履歷驗證申請表(30360324 A0).doc', order:1 },
-      { name:'SHC-T-FM-21 產銷履歷驗證申請表', format:'DOC', url:'SHC-T-FM-21 產銷履歷驗證申請表(30360324 A0).doc', order:2 },
-      { name:'SHC-T-FM-21-1 產銷履歷驗證土地資料表', format:'Excel', url:'SHC-T-FM-21-1 產銷履歷驗證土地資料表(20260324 A0).xlsx', order:3 },
-      { name:'SHC-T-FM-38 產銷履歷驗證異動申請書', format:'DOC', url:'SHC-T-FM-38 產銷履歷驗證異動申請書(20260324 A0).doc', order:4 },
-      { name:'SHC-T-FM-48 客戶申訴和抱怨資訊處理單', format:'DOC', url:'SHC-T-FM-48 客戶申訴和抱怨資訊處理單(20260324 A0).doc', order:5 },
-      { name:'SHC-T-WI-01 產銷履歷驗證手冊-公開文件', format:'PDF', url:'SHC-T-FM-63 SHC-T-WI-01 產銷履歷驗證手冊-公開文件.pdf', order:6 },
-      { name:'SHC-T-WI-02 產銷履歷驗證證書及驗證標誌使用規則-公開文件', format:'PDF', url:'SHC-T-WI-02 產銷履歷驗證證書及驗證標誌使用規則-公開文件.pdf', order:7 },
-      { name:'SHC-T-WI-03 產銷履歷保密性管理規定-公開文件', format:'PDF', url:'SHC-T-WI-03 產銷履歷保密性管理規定-公開文件.pdf', order:8 },
-      { name:'SHC-T-WI-04 產銷履歷驗證公正性聲明-公開文件', format:'PDF', url:'SHC-T-WI-04 產銷履歷驗證公正性聲明-公開文件.pdf', order:9 },
-      { name:'SHC-T-WI-05 產銷履歷驗證收費標準-公開文件', format:'PDF', url:'SHC-T-WI-05 產銷履歷驗證收費標準-公開文件.pdf', order:10 }
+      { name:'SHC-T-FM-21 產銷履歷驗證申請表', format:'DOC', url:'SHC-T-FM-21 產銷履歷驗證申請表(20260624 A1).doc', order:1 },
+      { name:'SHC-T-FM-21-1 產銷履歷驗證土地資料表', format:'Excel', url:'SHC-T-FM-21-1 產銷履歷驗證土地資料表(20260324 A0).xlsx', order:2 },
+      { name:'SHC-T-FM-38 產銷履歷驗證異動申請書', format:'DOC', url:'SHC-T-FM-38 產銷履歷驗證異動申請書(20260324 A0).doc', order:3 },
+      { name:'SHC-T-FM-48 客戶申訴和抱怨資訊處理單', format:'DOC', url:'SHC-T-FM-48 客戶申訴和抱怨資訊處理單(20260324 A0).doc', order:4 },
+      { name:'SHC-T-WI-01 產銷履歷驗證手冊-公開文件', format:'PDF', url:'SHC-T-FM-63 SHC-T-WI-01 產銷履歷驗證手冊-公開文件.pdf', order:5 },
+      { name:'SHC-T-WI-02 產銷履歷驗證證書及驗證標誌使用規則-公開文件', format:'PDF', url:'SHC-T-WI-02 產銷履歷驗證證書及驗證標誌使用規則-公開文件.pdf', order:6 },
+      { name:'SHC-T-WI-03 產銷履歷保密性管理規定-公開文件', format:'PDF', url:'SHC-T-WI-03 產銷履歷保密性管理規定-公開文件.pdf', order:7 },
+      { name:'SHC-T-WI-04 產銷履歷驗證公正性聲明-公開文件', format:'PDF', url:'SHC-T-WI-04 產銷履歷驗證公正性聲明-公開文件.pdf', order:8 },
+      { name:'SHC-T-WI-05 產銷履歷驗證收費標準-公開文件', format:'PDF', url:'SHC-T-WI-05 產銷履歷驗證收費標準-公開文件.pdf', order:9 },
+      { name:'SHC-T-FM-63 產銷履歷農產品標示審查申請書', format:'DOC', url:'SHC-T-FM-63 產銷履歷農產品標示審查申請書(20260324 A0).doc', order:10 },
     ],
     organic: [
       { name:'有機農產品驗證申請書', format:'PDF', url:'', order:1 },
@@ -2321,8 +2328,7 @@ function getDemoData(type) {
       { name:'證書暫時停止／結束申請單', format:'PDF', url:'', order:6 }
     ],
     other: [
-      { name:'抱怨與申訴作業程序', format:'PDF', url:'', order:1 },
-      { name:'客戶滿意度調查表', format:'FORM', url:'', order:2 }
+      { name:'客戶滿意度調查表', format:'FORM', url:'', order:1 }
     ]
   };
 }
